@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Your Bank</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            width: 100%;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .header h1 {
+            color: white;
+            font-size: 36px;
+            font-weight: 300;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            color: #aaa;
+            font-size: 16px;
+        }
+
+        .banks-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .bank-card {
+            background: white;
+            border-radius: 16px;
+            padding: 40px 30px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            text-decoration: none;
+            display: block;
+        }
+
+        .bank-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .bank-logo {
+            width: 180px;
+            height: 80px;
+            margin: 0 auto 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .bank-logo img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        .bank-description {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        .login-btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        /* Region Bank - Navy Blue */
+        .region-bank .login-btn {
+            background: #003366;
+            color: white;
+        }
+
+        .region-bank .login-btn:hover {
+            background: #002244;
+        }
+
+        /* Chase Bank - Blue */
+        .chase-bank .login-btn {
+            background: #117ACA;
+            color: white;
+        }
+
+        .chase-bank .login-btn:hover {
+            background: #0d5ea8;
+        }
+
+        /* Wells Fargo - Red */
+        .wells-fargo .login-btn {
+            background: #d71e28;
+            color: white;
+        }
+
+        .wells-fargo .login-btn:hover {
+            background: #b31820;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            color: #666;
+            font-size: 12px;
+        }
+
+        .footer a {
+            color: #888;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            color: #aaa;
+        }
+
+        @media (max-width: 768px) {
+            .banks-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .header h1 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Select Your Bank</h1>
+            <p>Choose your preferred bank to access online banking</p>
+        </div>
+
+        <div class="banks-grid">
+            <!-- Region Bank -->
+            <a href="https://regionbank.vercel.app" target="_blank" class="bank-card region-bank">
+                <div class="bank-logo">
+                    <img src="file:///c:/Users/HP/Downloads/Regions_Financial_Corporation-Logo.wine.png" alt="Region Bank Logo">
+                </div>
+                <div class="bank-description">
+                    Login to manage your checking, savings, and credit cards.
+                </div>
+                <span class="login-btn">Sign On</span>
+            </a>
+
+            <!-- Chase Bank -->
+            <a href="https://chase-topaz.vercel.app" target="_blank" class="bank-card chase-bank">
+                <div class="bank-logo">
+                    <img src="file:///c:/Users/HP/Downloads/Chase_Bank-Logo.wine.png" alt="Chase Bank Logo">
+                </div>
+                <div class="bank-description">
+                    Access your Chase accounts, pay bills, and transfer funds.
+                </div>
+                <span class="login-btn">Sign In</span>
+            </a>
+
+            <!-- Wells Fargo -->
+            <a href="https://wellsfargo-com-sand.vercel.app/" target="_blank" class="bank-card wells-fargo">
+                <div class="bank-logo">
+                    <img src="file:///c:/Users/HP/Downloads/Wells_Fargo_Logo_(2020).svg.png" alt="Wells Fargo Logo">
+                </div>
+                <div class="bank-description">
+                    Login to view accounts, transactions, and online services.
+                </div>
+                <span class="login-btn">Sign On</span>
+            </a>
+        </div>
+
+        <div class="footer">
+            <p>© 2026 Bank Portal. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>
